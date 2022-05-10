@@ -35,7 +35,7 @@ func NewClient() (c *http.Client, err error) {
 		Jar:       scraper_transport.Cookies,
 	}
 
-	return
+	return c, err
 }
 
 func NewTransport(upstream http.RoundTripper) (*Transport, error) {
